@@ -6,17 +6,18 @@
 
 LLM-powered command-line repair. Zero dependencies. Works with a local model — no API key, fully offline.
 
-![PyPI](https://img.shields.io/pypi/v/oops-cli)
-![Python](https://img.shields.io/pypi/pyversions/oops-cli)
-![License](https://img.shields.io/github/license/syahra712/oops)
+[![PyPI](https://img.shields.io/pypi/v/oops-cli)](https://pypi.org/project/oops-cli/)
+[![Python](https://img.shields.io/pypi/pyversions/oops-cli)](https://pypi.org/project/oops-cli/)
+[![License](https://img.shields.io/github/license/syahra712/oops)](https://github.com/syahra712/oops/blob/main/LICENSE)
 
 </div>
 
+<!-- DEMO VIDEO: replace the line below with your video URL.
+     Get it from your repo's README on GitHub (the pencil/edit view) — it's the
+     line that looks like https://github.com/user-attachments/assets/xxxxxxxx
+     Paste that URL on its own line, with a blank line above and below it. -->
 
-
-https://github.com/user-attachments/assets/625b9f57-1d50-4b1f-8031-6f8d1450ac11
-
-
+REPLACE_THIS_LINE_WITH_YOUR_VIDEO_URL
 
 ---
 
@@ -95,8 +96,4 @@ Issues and PRs welcome. Good first ones: more providers (OpenAI, Mistral), a `--
 
 ## License
 
-MIT
-
-
-
-
+[MIT](https://github.com/syahra712/oops/blob/main/LICENSE)
