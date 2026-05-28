@@ -6,9 +6,9 @@
 
 LLM-powered command-line repair. Zero dependencies. Works with a local model — no API key, fully offline.
 
-[![PyPI](https://img.shields.io/pypi/v/oops-cli)](https://pypi.org/project/oops-cli/)
-[![Python](https://img.shields.io/pypi/pyversions/oops-cli)](https://pypi.org/project/oops-cli/)
-[![License](https://img.shields.io/github/license/syahra712/oops)](https://github.com/syahra712/oops/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/oops-cli?v=2)](https://pypi.org/project/oops-cli/)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue?v=2)](https://pypi.org/project/oops-cli/)
+[![License](https://img.shields.io/github/license/syahra712/oops?v=2)](https://github.com/syahra712/oops/blob/main/LICENSE)
 
 </div>
 
