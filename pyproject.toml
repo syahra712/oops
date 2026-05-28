@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oops-cli"
+version = "0.1.0"
+description = "Fix your last failed shell command with an LLM. Type `oops`."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["cli", "llm", "ai", "shell", "terminal", "developer-tools"]
+authors = [{ name = "you" }]
+dependencies = []  # zero dependencies — pure stdlib
+
+[project.urls]
+Homepage = "https://github.com/syahra712/oops"
+Issues = "https://github.com/syahra712/oops/issues"
+
+[project.scripts]
+oops-fix = "oops.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["oops"]
