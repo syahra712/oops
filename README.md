@@ -12,12 +12,12 @@ LLM-powered command-line repair. Zero dependencies. Works with a local model —
 
 </div>
 
-<!-- DEMO VIDEO: replace the line below with your video URL.
-     Get it from your repo's README on GitHub (the pencil/edit view) — it's the
-     line that looks like https://github.com/user-attachments/assets/xxxxxxxx
-     Paste that URL on its own line, with a blank line above and below it. -->
 
-REPLACE_THIS_LINE_WITH_YOUR_VIDEO_URL
+
+
+https://github.com/user-attachments/assets/6792310d-14f6-4c59-8cbd-4a5f28681b4b
+
+
 
 ---
 
