@@ -6,11 +6,17 @@
 
 LLM-powered command-line repair. Zero dependencies. Works with a local model — no API key, fully offline.
 
-<!-- Record a terminal GIF and drop it here before launch. This single GIF
-     is the most important asset in the whole repo. Try `vhs` or `asciinema`. -->
-<img src="docs/demo.gif" alt="oops demo" width="600">
+![PyPI](https://img.shields.io/pypi/v/oops-cli)
+![Python](https://img.shields.io/pypi/pyversions/oops-cli)
+![License](https://img.shields.io/github/license/syahra712/oops)
 
 </div>
+
+
+
+https://github.com/user-attachments/assets/625b9f57-1d50-4b1f-8031-6f8d1450ac11
+
+
 
 ---
 
@@ -19,6 +25,7 @@ $ git statsu
 git: 'statsu' is not a git command. See 'git --help'.
 
 $ oops
+↻ reproducing: git statsu
 🤖 thinking...
 
   git status
@@ -34,22 +41,23 @@ You mistyped a command, it failed, you sigh — and instead of squinting at the 
 
 ```bash
 pip install oops-cli
-oops --install      # adds a tiny shell hook to your .bashrc / .zshrc
-source ~/.bashrc    # or just open a new terminal
+oops-fix --install   # adds a tiny shell hook to your .zshrc / .bashrc
+source ~/.zshrc      # or ~/.bashrc, or just open a new terminal
 ```
 
 That's it. After any failed command, type `oops`.
 
 ## Pick a brain
 
-`oops` auto-detects a provider:
+`oops` auto-detects a provider based on which key is set (checked in this order),
+falling back to a local model if none are:
 
 | Provider | Setup | Notes |
 |----------|-------|-------|
-| **Anthropic** | `export ANTHROPIC_API_KEY=...` | Fast, smart, default if the key is set |
+| **Anthropic** | `export ANTHROPIC_API_KEY=...` | Fast, smart |
+| **Gemini** | `export GEMINI_API_KEY=...` | Generous free tier |
+| **Groq** | `export GROQ_API_KEY=...` | Very fast, free tier |
 | **Local (Ollama)** | install [Ollama](https://ollama.com), `ollama pull llama3.2` | No key, fully offline, free |
-
-If `ANTHROPIC_API_KEY` is set it uses that; otherwise it falls back to a local Ollama model.
 
 ## How it works
 
@@ -65,7 +73,11 @@ Nothing executes without your confirmation.
 | Env var | Default | What |
 |---------|---------|------|
 | `ANTHROPIC_API_KEY` | – | Use the Anthropic API |
+| `GEMINI_API_KEY` | – | Use the Google Gemini API |
+| `GROQ_API_KEY` | – | Use the Groq API |
 | `OOPS_MODEL` | `claude-haiku-4-5-...` | Anthropic model |
+| `OOPS_GEMINI_MODEL` | `gemini-2.0-flash` | Gemini model |
+| `OOPS_GROQ_MODEL` | `llama-3.3-70b-versatile` | Groq model |
 | `OOPS_OLLAMA_MODEL` | `llama3.2` | Local model name |
 | `OOPS_OLLAMA_URL` | `http://localhost:11434` | Ollama endpoint |
 
@@ -73,10 +85,18 @@ Nothing executes without your confirmation.
 
 The error message almost always contains the answer. `oops` just reads it for you so you don't have to context-switch. It's the difference between a 200ms `oops` and a 30-second detour to your browser.
 
+## A note on safety
+
+`oops` re-runs your command to read its error, then runs the suggested fix only after you confirm. It's built for the common cases — typos, wrong flags, missing files. Don't point it at destructive commands.
+
 ## Contributing
 
-Issues and PRs welcome. Good first ones: more providers (OpenAI, Gemini, Groq), a `--yes` auto-run flag, multi-suggestion mode, and a `--explain` mode that explains instead of fixing.
+Issues and PRs welcome. Good first ones: more providers (OpenAI, Mistral), a `--yes` auto-run flag, multi-suggestion mode, and a `--explain` mode that explains instead of fixing.
 
 ## License
 
 MIT
+
+
+
+
